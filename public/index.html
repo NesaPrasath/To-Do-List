@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="./home.css">
     <title>Document</title>
 </head>
 <body>
     <div class="top-bar">
-        <label style="width:20rem;"><h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">PIPER</h1></label>
-        <nav>
-            <ul>
-                <li><a href="javascript.html">Javascript</a></li>
-                <li><a href="index.html">HTML</a></li>
-            </ul>
-        </nav>
+        <label style="width:20rem;"><h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TASK MANAGER</h1></label>
     </div>
     <main class="task-form">
-        <form id="Form">
-            <label><h2>Taskbar Form</h2></label><br>
-            <input type="text" class="text-form" name="name" ><br>
-            <button id="btn" type="submit">SUBMIT</button>
-        </form>
-        <label class="Alert"></label>
+        <div>
+            <form id="Form">
+                <label><h2>Taskbar Form</h2></label><br>
+                <input type="text" class="text-form" name="name"><br>
+                <button id="btn" type="submit">Add Task</button>
+            </form>
+            <label class="Alert"></label>
+        </div>
+        <div class="all-task" ></div>
     </main>
     <!-- axios -->
     <script

@@ -1,27 +1,52 @@
-const getAllTask=(req,res)=>
-{
-    res.send("All Task control")
-}
+const Task=require('../models/Task')
+const control=require('../middleware/control-fnc')
+const {createError}=require('../middleware/custom-error')
 
-const createTask=(req,res)=>
+const getAllTask=control(async (req,res)=>
 {
-    res.json(req.body)
-}
+    const task=await Task.find({})
+    res.status(201).json({task})   
+})
+const createTask=control(async (req,res)=>
+{
+    const task=await Task.create(req.body) 
+    res.status(201).json({task})
+})
 
-const getTask=(req,res)=>
+const getTask=control(async (req,res,next)=>
 {
-    res.json({id:req.params.id})
-}
+        const {id:taskID}=req.params
+        const task=await Task.findOne({_id:taskID})
+        if(!task)
+        {
+            return next(createError(`no task with ${taskID}`),404)
+        }
+        res.status(201).json({task})
+})
 
-const updateTask=(req,res)=>
+const updateTask=control(async (req,res)=>
 {
-    res.send("Update Task control")
-}
+        const {id:taskID}=req.params
+        const task=await Task.findOneAndUpdate({ _id: taskID},req.body,{
+        new:true,runValidators:true
+        })
+        if(!task)
+        {
+            return next(createError(`no task with ${taskID}`),404)
+        }
+        res.status(201).json({task})
+})
 
-const deleteTask=(req,res)=>
+const deleteTask=control(async (req,res)=>
 {
-    res.send("delete Task control")
-}
+        const {id:taskID}=req.params
+        const task=await Task.findOneAndDelete({_id:taskID})
+        if(!task)
+        {
+            return next(createError(`no task with ${taskID}`),404)
+        }
+        res.status(201).json({task})
+})
 module.exports={
     getAllTask,createTask,getTask,updateTask,deleteTask
 } 

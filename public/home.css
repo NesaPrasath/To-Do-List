@@ -15,8 +15,9 @@ body{
     height: max-content;
 }
 .top-bar label{
-    margin-left: 20rem;
-    padding:15px ;
+    margin-left: 50rem;
+    padding:35px 10px 10px 10px;
+    align-items: center;
 }
 a{
     padding: 15px;
@@ -28,17 +29,10 @@ a{
 {
     background-color: #f1fbf8;
     color: #0b0d0d;
-    margin-top: 2%;
+    margin: 2% 2% 0% 2%;
     padding: 5%;
     justify-content: center;
     align-items: center;
-}
-ul{
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin: left 30rem;
-    padding: 20px;
 }
 .text-form
 {
@@ -51,8 +45,27 @@ ul{
     color: #0b0d0d;
     font-size: 30px;
     font-weight: bold;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-button
+.get-task
+{
+    margin-top: 12px;
+    padding: 1rem 2.5rem;
+    background:  #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: 0.3s ease-in-out all;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.get-task h5{
+    font-size: larger;
+
+}
+#btn
 {
     width: 130px;
     padding: 15px;
@@ -64,20 +77,49 @@ button
     border-radius: 8px;
     align-items: center;
     cursor: pointer;
-    font-weight: bolder;
 }
-.text:hover
+.text-form:hover
 {
     border-color: #b9ffa9;
     box-shadow: 0px 0px 8px 0px #a9ff97;
 }
-button:hover{
+#btn:hover{
     border-color: #b9ffa9;
     box-shadow: 0px 0px 8px 0px #a9ff97;  
 }
 .Alert
 {
-    margin: 12px;
+    margin: 8px;
     padding: 4px;
     justify-content: center;
 }
+.fa-check-circle{
+    visibility: hidden;
+}
+.greencolor
+{
+    color:#b9ffa9 ;
+}
+.greenGlow,.edit:hover{
+    color: #b9ffa9;
+    text-shadow: 0 0 3px #b9ffa9;
+  }
+  .task-completed .fa-check-circle {
+    visibility: visible;
+  }
+  .redcolor
+  {
+    color: #FF000DFF;
+  }
+  .delete:hover
+  {
+    color: #FF000DFF;
+    text-shadow: 0 0 3px #FF000DFF;
+  }
+  .delete
+  {
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+  }
+  

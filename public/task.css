@@ -1,0 +1,100 @@
+*
+{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    align-items: center;
+}
+.container
+{
+    align-items: center;
+    padding: 2rem 2rem 4rem 6rem;
+    margin: 12% 30% 25% 25%;
+    height: 28rem;
+    border: 1px solid white;
+    box-shadow: 0px 0px 8px 0px #a9ff97;
+}
+h2{
+    padding-left:14rem ;
+    margin-bottom: 3rem;
+    font-size: 35px;
+}
+.single-task-form .form-control
+{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  align-items: center;
+  justify-items: start;
+  gap: 0rem 1rem;
+  margin-bottom: 1rem;
+}
+label
+{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+}
+p{
+    font-size: large;
+}
+.task-edit-name
+{
+    border-radius: 4px;
+    height: 30px;
+    width: 300px;
+    outline: none;
+    color: #0b0d0d;
+    font-size: 24px;
+    box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.task-edit-name:hover{
+    border-color: #b9ffa9;
+    box-shadow: 0px 0px 8px 0px #a9ff97;
+}
+.task-edit-btn
+{
+    width: 200px;
+    padding: 10px;
+    height: 30px;
+    background-color:#4eff48;
+    color: #0b0d0d;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.back-link {
+    display: block;
+    border-radius: 4px;
+    width: 150px;
+    color: white;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4rem;
+    background: #222;
+    text-decoration: none;
+  }
+  
+.task-edit-completed {
+    width: auto;
+  }
+  .back-link:hover {
+    background: #222;
+    opacity: 0.75;
+  }
+  
+  .single-task-form .form-alert {
+    text-align: center;
+  }
+.suc
+{
+    color: greenyellow;
+}
+.err
+{
+    color: tomato;
+}
